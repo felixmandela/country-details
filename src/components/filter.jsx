@@ -1,23 +1,19 @@
-export default function Filter() {
+export default function Filter({ region, setRegion }) {
   return (
     <>
-      <form>
-        <label>
-          <input type="checkbox" />
-        </label>
-        <label>
-          <input type="checkbox" />
-        </label>
-        <label>
-          <input type="checkbox" />
-        </label>
-        <label>
-          <input type="checkbox" />
-        </label>
-        <label>
-          <input type="checkbox" />
-        </label>
-      </form>
+      <select
+        value={region}
+        onChange={(e) => {
+          setRegion(e.target.value);
+        }}
+      >
+        <option value="">Filter by Region</option>
+        <option value="Africa">Africa</option>
+        <option value="America">America</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
     </>
   );
 }
