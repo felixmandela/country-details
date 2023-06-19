@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 import { getCountryProfile } from "../components/api";
 
-export default function CountryProfile() {
+export default function CountryProfile({ selectedCountry }) {
   const [countryProfile, setCountryProfile] = useState("");
 
   useEffect(() => {
     const fetchCountryProfile = async () => {
       try {
-        const data = await getCountryProfile("arg");
+        const data = await getCountryProfile(selectedCountry);
         setCountryProfile(data);
       } catch (error) {
         console.log(error.message);
       }
     };
     fetchCountryProfile();
-  }, []);
+  }, [selectedCountry]);
 
   return (
     <div>
