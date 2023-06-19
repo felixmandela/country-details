@@ -4,7 +4,7 @@ import Searchbar from "../components/search-bar";
 import { getAllCountryData } from "../components/api";
 import React, { useState, useEffect } from "react";
 
-export default function Home({ setSelectedCountry }) {
+export default function Home() {
   const [search, setSearch] = useState("");
   const [country, setCountry] = useState([]);
   const [searchedCountry, setSearchedCountry] = useState([]);
@@ -60,15 +60,10 @@ export default function Home({ setSelectedCountry }) {
   }, [search, filteredCountry]);
 
   return (
-    <>
-      <main>
-        <Filter region={region} setRegion={setRegion} />
-        <Searchbar search={search} setSearch={setSearch} />
-        <CountryCard
-          searchedCountry={searchedCountry}
-          setSelectedCountry={setSelectedCountry}
-        />
-      </main>
-    </>
+    <main className="ml-44 mr-44 pt-14">
+      <Filter region={region} setRegion={setRegion} />
+      <Searchbar search={search} setSearch={setSearch} />
+      <CountryCard searchedCountry={searchedCountry} />
+    </main>
   );
 }
