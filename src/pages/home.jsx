@@ -1,6 +1,5 @@
 import CountryCard from "../components/card";
 import Filter from "../components/filter";
-import NavBar from "../components/navbar";
 import Searchbar from "../components/search-bar";
 import { getAllCountryData } from "../components/api";
 import React, { useState, useEffect } from "react";
@@ -59,13 +58,9 @@ export default function Home() {
     const filter = filteredCountry.filter((c) => regex.test(c.name.common));
     setSearchedCountry(filter);
   }, [search, filteredCountry]);
-  console.log(searchedCountry);
 
   return (
     <>
-      <nav>
-        <NavBar />
-      </nav>
       <main>
         <Filter region={region} setRegion={setRegion} />
         <Searchbar search={search} setSearch={setSearch} />

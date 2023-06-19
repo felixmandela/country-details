@@ -11,6 +11,17 @@ export const getAllCountryData = async () => {
   }
 };
 
+export const getCountryProfile = async (code) => {
+  try {
+    const { data } = await axios.get(
+      `https://restcountries.com/v3.1/alpha/${code}?fields=name,population,region,capital,flags,cca3,borders,continents`
+    );
+    return data;
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
 // export const getRegionData = async (region) => {
 //   try {
 //     const { data } = await axios.get(
