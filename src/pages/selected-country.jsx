@@ -42,7 +42,7 @@ export default function CountryProfile() {
   // };
 
   return (
-    <div className="ml-44 mr-44 flex h-full flex-col  pt-14">
+    <main className="ml-44 mr-44 flex h-full flex-col pt-14">
       <div className="flex h-1/5 items-center">
         <Link className="flex h-12 w-24 items-center justify-center" to="/">
           Back
@@ -64,6 +64,6 @@ export default function CountryProfile() {
           </ul>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

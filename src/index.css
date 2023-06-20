@@ -2,8 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --dark-blue: hsl(209, 23%, 22%);
+  --very-dark-blue-1: hsl(207, 26%, 17%);
+  --very-dark-blue-2: hsl(200, 15%, 8%);
+  --dark-gray: hsl(0, 0%, 52%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
 html,
 body,
 #root {
   height: 100%;
 }
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--very-dark-blue-2);
+  background-color: var(--very-light-gray);
+}
+
+.dark-mode-elements {
+  color: hsl(209, 23%, 22%);
+}
+
+.dark-mode-bg {
+  background-color: hsl(207, 26%, 17%);
+}
+
+.dark-mode-text {
+  color: hsl(0, 0%, 100%);
+}
+
+.light-mode-elements {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.light-mode-bg {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.light-mode-text {
+  color: hsl(200, 15%, 8%);
+}
+
+.light-mode-input {
+  color: hsl(0, 0%, 52%);
+}
+
+/* input[type="search"] {
+  outline: none;
+  width: 100px;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type="search"]:focus {
+  width: 250px;
+} */

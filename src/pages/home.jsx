@@ -60,9 +60,11 @@ export default function Home() {
   }, [search, filteredCountry]);
 
   return (
-    <main className="ml-44 mr-44 pt-14">
-      <Filter region={region} setRegion={setRegion} />
-      <Searchbar search={search} setSearch={setSearch} />
+    <main className=" ml-44 mr-44 h-full pt-14">
+      <section className="flex h-1/5 flex-row items-center justify-between">
+        <Searchbar search={search} setSearch={setSearch} />
+        <Filter region={region} setRegion={setRegion} />
+      </section>
       <CountryCard searchedCountry={searchedCountry} />
     </main>
   );

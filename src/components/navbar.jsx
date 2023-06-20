@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <header className="fixed top-0 h-14 w-full bg-red-800">
-      <nav className="ml-44 mr-44 flex h-14 flex-row items-center justify-between">
+    <header className="light-mode-elements border-grey-100 fixed top-0 h-20 w-full border shadow">
+      <nav className="ml-44 mr-44 flex h-full flex-row items-center justify-between">
         <div>
           <Link to="/">
-            <h1>Where in the world?</h1>
+            <h1 className="text-2xl font-bold">Where in the world?</h1>
           </Link>
         </div>
         <button>Dark Mode</button>
