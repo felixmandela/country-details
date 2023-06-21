@@ -35,7 +35,7 @@ export default function Filter({ region, setRegion }) {
 
   return (
     <Select
-      className=" border-gray-10 rounded border shadow"
+      className=" w-44 rounded border border-gray-100 shadow"
       value={options.find((option) => option.value === region)}
       onChange={(selectedOption) => setRegion(selectedOption.value)}
       options={options}

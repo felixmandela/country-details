@@ -4,6 +4,9 @@ import NavBar from "./components/navbar";
 import Home from "./pages/home";
 import CountryProfile from "./pages/selected-country";
 
+// const Home = lazy(() => import("./pages/home"));
+// const CountryProfile = lazy(() => import("./pages/selected-country"));
+
 function App() {
   return (
     <>
