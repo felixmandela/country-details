@@ -73,7 +73,7 @@ export default function CountryProfile() {
           <>
             <img
               className="h-2/3 w-1/2 pr-20"
-              src={countryProfile?.flags?.png}
+              src={countryProfile?.flags?.svg}
               alt={countryProfile?.flags?.alt}
             />
             <div className="w-1/2">
