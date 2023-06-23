@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function NavBar() {
+export default function NavBar({ isDarkMode, setIsDarkMode }) {
   return (
     <header className="light-mode-elements border-grey-100 fixed top-0 z-10 h-20 w-full border border-l-0 border-r-0 shadow">
       <nav className="ml-8 mr-8 flex h-full flex-row items-center justify-between md:ml-20 md:mr-20 lg:ml-44 lg:mr-44">
@@ -11,7 +11,7 @@ export default function NavBar() {
             </h1>
           </Link>
         </div>
-        <button>Dark Mode</button>
+        <button onClick={() => setIsDarkMode(!isDarkMode)}>Dark Mode</button>
       </nav>
     </header>
   );

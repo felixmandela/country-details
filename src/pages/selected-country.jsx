@@ -70,7 +70,7 @@ export default function CountryProfile({ country }) {
 
   return (
     <>
-      <div className="flex h-1/5 items-center">
+      <div className="mb-10 flex h-1/5 items-center">
         <Link
           className="flex h-12 w-24 items-center justify-center border border-gray-100 shadow"
           to="/"
@@ -78,7 +78,7 @@ export default function CountryProfile({ country }) {
           Back
         </Link>
       </div>
-      <div className="flex h-4/5 w-full flex-col xl:flex-row">
+      <div className="flex h-4/5 w-full flex-col xl:flex-row ">
         {isLoading ? (
           <Loading />
         ) : error ? (
@@ -86,7 +86,7 @@ export default function CountryProfile({ country }) {
         ) : (
           <>
             <img
-              className="mb-10 h-2/3 w-full xl:w-[560px]"
+              className="mb-10 h-2/3 w-full xl:w-[560px] xl:pt-10"
               src={countryProfile?.flags?.svg}
               alt={countryProfile?.flags?.alt}
             />
