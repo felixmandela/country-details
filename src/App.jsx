@@ -30,13 +30,15 @@ function App() {
       <Router>
         <NavBar />
         {isLoading ? null : (
-          <Routes>
-            <Route path="/" element={<Home country={country} />} />
-            <Route
-              path="/:countryCode"
-              element={<CountryProfile country={country} />}
-            />
-          </Routes>
+          <main className="relative ml-8 mr-8 h-full pt-14 md:ml-20 md:mr-20 lg:ml-44 lg:mr-44">
+            <Routes>
+              <Route path="/" element={<Home country={country} />} />
+              <Route
+                path="/:countryCode"
+                element={<CountryProfile country={country} />}
+              />
+            </Routes>
+          </main>
         )}
       </Router>
     </>

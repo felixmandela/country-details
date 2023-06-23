@@ -3,7 +3,7 @@ import { getCountryProfile } from "../components/api";
 import { Link, useParams } from "react-router-dom";
 
 const Loading = () => (
-  <div className="absolute left-1/2 top-1/2 h-12 w-12 animate-spin rounded-full border-t-4 border-gray-300"></div>
+  <div className="absolute left-[calc(50%-1.5rem)] top-[calc(50%-1.5rem)] h-12 w-12  animate-spin rounded-full border-t-4 border-gray-300"></div>
 );
 
 export default function CountryProfile({ country }) {
@@ -35,7 +35,7 @@ export default function CountryProfile({ country }) {
 
   const BorderCountry = () =>
     countryProfile?.borders?.length > 0 && (
-      <div className="mt-10 flex flex-row items-start">
+      <div className="mt-10 flex flex-col items-start sm:flex-row">
         <span className="mt-1 min-w-[150px] font-bold">Border Countries:</span>
         <ul className="flex flex-row flex-wrap gap-4">
           {countryProfile?.borders?.map((cca3Code) => (
@@ -69,7 +69,7 @@ export default function CountryProfile({ country }) {
   // };
 
   return (
-    <main className="ml-44 mr-44 flex h-full flex-col pt-14">
+    <>
       <div className="flex h-1/5 items-center">
         <Link
           className="flex h-12 w-24 items-center justify-center border border-gray-100 shadow"
@@ -78,7 +78,7 @@ export default function CountryProfile({ country }) {
           Back
         </Link>
       </div>
-      <div className="flex h-4/5 w-full flex-row">
+      <div className="flex h-4/5 w-full flex-col xl:flex-row">
         {isLoading ? (
           <Loading />
         ) : error ? (
@@ -86,16 +86,16 @@ export default function CountryProfile({ country }) {
         ) : (
           <>
             <img
-              className="h-2/3 w-[560px]"
+              className="mb-10 h-2/3 w-full xl:w-[560px]"
               src={countryProfile?.flags?.svg}
               alt={countryProfile?.flags?.alt}
             />
-            <section className="w-[calc(100%-560px)] p-10 pl-20">
+            <section className="w-full pb-10 xl:w-[calc(100%-560px)] xl:p-10 xl:pl-20">
               <h2 className=" mb-8 text-4xl font-bold">
                 {countryProfile?.name?.common}
               </h2>
-              <div className="flex flex-row gap-8">
-                <div className="w-1/2">
+              <div className="flex flex-col gap-8 sm:flex-row">
+                <div className="w-full sm:w-1/2">
                   <p className="mb-3 ">
                     <span className="font-bold">Native Name:</span>{" "}
                     {Object.keys(countryProfile?.name?.nativeName)
@@ -119,7 +119,7 @@ export default function CountryProfile({ country }) {
                     {countryProfile?.capital}
                   </p>
                 </div>
-                <div className="w-1/2">
+                <div className="w-full sm:w-1/2">
                   <p className="mb-3 ">
                     <span className="font-bold">Top Level Domain:</span>{" "}
                     {countryProfile?.tld[0]}
@@ -150,6 +150,6 @@ export default function CountryProfile({ country }) {
           </>
         )}
       </div>
-    </main>
+    </>
   );
 }

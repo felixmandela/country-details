@@ -4,7 +4,7 @@ export default function Searchbar({ search, setSearch }) {
       <input
         className="outline-none"
         type="search"
-        placeholder="enter your search"
+        placeholder="Search for a country..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
