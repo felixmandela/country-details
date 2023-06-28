@@ -6,7 +6,7 @@ export default function CountryCard({ searchedCountry }) {
             <Link to={`/${c.cca3}`} key={c.cca3}>
                 <div className=" light-mode-elements flex h-96 w-80 flex-col rounded-xl border border-gray-100 shadow  hover:bg-gray-100 dark:border-gray-900 dark:bg-gray-800 dark:shadow-gray-950 hover:dark:bg-gray-950 sm:h-72 sm:w-64 xl:h-96 xl:w-80">
                     <img
-                        className="h-1/2 overflow-hidden rounded-t-xl"
+                        className="h-1/2 w-full overflow-hidden rounded-t-xl"
                         src={c?.flags?.png}
                         alt={c?.flags?.alt}
                     />
