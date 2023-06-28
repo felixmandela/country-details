@@ -35,8 +35,8 @@ export default function CountryProfile({ country }) {
 
     const BorderCountry = () =>
         countryProfile?.borders?.length > 0 && (
-            <div className="mt-10 flex flex-col items-start sm:flex-row">
-                <span className="mt-1 min-w-[150px] font-bold">
+            <div className="mt-10 flex flex-col items-start min-[1320px]:flex-row">
+                <span className="mb-2 mt-1 min-w-[150px] font-bold">
                     Border Countries:
                 </span>
                 <ul className="flex flex-row flex-wrap gap-4">
@@ -81,7 +81,7 @@ export default function CountryProfile({ country }) {
                     Back
                 </Link>
             </div>
-            <div className="flex w-full flex-col xl:flex-row ">
+            <div className="flex w-full flex-col xl:flex-row">
                 {isLoading ? (
                     <Loading />
                 ) : error ? (
@@ -89,11 +89,11 @@ export default function CountryProfile({ country }) {
                 ) : (
                     <>
                         <img
-                            className="mb-10 h-2/3 w-full xl:w-[560px] xl:pt-10"
+                            className="mb-10 h-2/3 w-full xl:w-[540px] xl:pt-10"
                             src={countryProfile?.flags?.svg}
                             alt={countryProfile?.flags?.alt}
                         />
-                        <section className="w-full pb-10 xl:w-[calc(100%-560px)] xl:p-10 xl:pl-20">
+                        <section className="w-full pb-10 xl:w-[calc(100%-540px)] xl:p-10 xl:pr-0">
                             <h2 className=" mb-8 text-4xl font-bold">
                                 {countryProfile?.name?.common}
                             </h2>
