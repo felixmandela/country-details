@@ -18,8 +18,8 @@ export default function NavBar() {
     }, [mode]);
 
     return (
-        <header className="light-mode-elements fixed top-0 z-10 h-20 w-full border-b-[1px] border-gray-100 shadow dark:border-gray-800 dark:bg-gray-800 dark:shadow-gray-700">
-            <nav className="ml-8 mr-8 flex h-full flex-row items-center justify-between md:ml-20 md:mr-20 lg:ml-44 lg:mr-44">
+        <header className="light-mode-elements fixed top-0 z-10 grid h-20 w-full grid-cols-[1fr,420px,1fr] border-b-[1px] border-gray-100 shadow dark:border-gray-800 dark:bg-gray-800 dark:shadow-gray-700 sm:grid-cols-[1fr,640px,1fr] md:grid-cols-[1fr,768px,1fr] lg:grid-cols-[1fr,1024px,1fr] xl:grid-cols-[1fr,1200px,1fr] 2xl:grid-cols-[1fr,1536px,1fr] ">
+            <nav className="col-start-2 ml-8 mr-8 flex h-full flex-row items-center justify-between">
                 <div>
                     <Link to="/">
                         <h1 className=" text-lg font-bold md:text-2xl">
