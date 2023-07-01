@@ -31,7 +31,7 @@ export default function NavBar() {
                     className="flex cursor-pointer flex-row items-center justify-center rounded-full border border-gray-100 px-4 py-4 shadow hover:bg-gray-100 dark:border-gray-800 dark:bg-gray-800 dark:shadow-gray-950 hover:dark:bg-gray-950"
                     onClick={() => setMode(mode === "light" ? "dark" : "light")}
                 >
-                    <FontAwesomeIcon icon={mode ? faSun : faMoon} />
+                    <FontAwesomeIcon icon={mode === "light" ? faMoon : faSun} />
                 </div>
             </nav>
         </header>
